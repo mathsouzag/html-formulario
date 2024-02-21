@@ -5,6 +5,117 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Formulário</title>
+        <style>
+            body {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            }
+            .musica {
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+            }
+            h1 {
+                text-align: center;
+                padding-bottom: 50px;
+            }
+        </style>
     </head>
-    <body></body>
+    <body>
+        <h1>Pesquisa de Preferências Musicais</h1>
+        <div class="musica">
+            <form>
+                <label for="nome">Nome:</label><br />
+                <input type="text" id="nome" name="nome" required /><br /><br />
+
+                <label for="idade">Idade:</label><br />
+                <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    required
+                /><br /><br />
+
+                <label for="genero_preferido">Gênero musical preferido:</label
+                ><br />
+                <select id="genero_preferido" name="genero_preferido">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="hip_hop">Hip Hop</option>
+                    <option value="eletronica">Eletrônica</option>
+                    <option value="indie">Indie</option>
+                    <option value="outro">Outro</option></select
+                ><br /><br />
+
+                <label
+                    >Quais tipos de música você costuma ouvir? (Marque todas as
+                    que se aplicam)</label
+                ><br />
+                <input
+                    type="checkbox"
+                    id="rock"
+                    name="tipo_musica[]"
+                    value="rock"
+                />
+                <label for="rock">Rock</label><br />
+                <input
+                    type="checkbox"
+                    id="pop"
+                    name="tipo_musica[]"
+                    value="pop"
+                />
+                <label for="pop">Pop</label><br />
+                <input
+                    type="checkbox"
+                    id="hip_hop"
+                    name="tipo_musica[]"
+                    value="hip_hop"
+                />
+                <label for="hip_hop">Hip Hop</label><br />
+                <input
+                    type="checkbox"
+                    id="eletronica"
+                    name="tipo_musica[]"
+                    value="eletronica"
+                />
+                <label for="eletronica">Eletrônica</label><br />
+                <input
+                    type="checkbox"
+                    id="indie"
+                    name="tipo_musica[]"
+                    value="indie"
+                />
+                <label for="indie">Indie</label><br /><br />
+
+                <label
+                    >Você costuma frequentar shows e festivais de música?</label
+                ><br />
+                <input
+                    type="radio"
+                    id="sim"
+                    name="frequenta_shows"
+                    value="sim"
+                />
+                <label for="sim">Sim</label><br />
+                <input
+                    type="radio"
+                    id="nao"
+                    name="frequenta_shows"
+                    value="nao"
+                />
+                <label for="nao">Não</label><br /><br />
+
+                <label for="comentario">Comentário adicional:</label><br />
+                <textarea
+                    id="comentario"
+                    name="comentario"
+                    rows="4"
+                    cols="50"
+                ></textarea
+                ><br /><br />
+
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
+    </body>
 </html>
